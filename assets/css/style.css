@@ -1,0 +1,21 @@
+/**
+* Stylesheet for meetswitzerland.ch
+* Rules: - Order a-z0-9
+*/
+
+/**
+* general styling
+*/
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/**
+* specific XYZ
+*/
