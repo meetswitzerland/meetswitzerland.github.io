@@ -4,7 +4,7 @@
 */
 
 /**
-* general styling
+* general styling tags
 */
 * {
 	box-sizing: border-box;
@@ -17,22 +17,54 @@ a {
 }
 
 /**
-* specific XYZ
+* general styling classes
+*/
+.transparent-blue-box {
+	background: rgba(0, 67, 255, 140);
+	border-radius: 10px;
+	box-shadow: 0 0 25px 0 #4949FC;
+	padding: 15px;
+}
+
+/**
+* specific styling home
 */
 .home {
 	background:url('../img/wallpapers/wp-matterhorn-day.jpg');
     position: relative;
 }
 
-.wrapper {
-	background-color: rgba(248, 247, 216, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.home .title, .home .label {
+	color: #fff;
 }
 
-.bg-transparent-blue {
-	background: rgba(0, 0, 255, 0.7);
+.home .container {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%);
+	transform: translateY(-50%);
+}
+
+.home .wrapper {
+	background-color: rgba(255, 255, 255, 100);
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.home .button-bar {
+	padding-top: 15px;
+}
+
+.home .button-bar .button {
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
 }
