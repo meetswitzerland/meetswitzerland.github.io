@@ -74,12 +74,13 @@ a {
     display: block;
     font-size: 24px;
     font-weight: bold;
-    padding: 5px;
+    padding: 10px 5px;
     width: 100%;
 }
 
 .home .button-bar .button:hover {
 	background-color: #fff;
+	box-shadow: none;
 	color: #0043ff;
     /* Firefox */
     -moz-transition: all 0.5s ease-in;
