@@ -44,6 +44,7 @@ a {
 
 .home .input-text {
 	border: none;
+	color: grey;
 	padding: 5px;
 }
 
@@ -81,11 +82,11 @@ a {
 	background-color: #fff;
 	color: #0043ff;
     /* Firefox */
-    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.5s ease-in;
     /* WebKit */
-    -webkit-transition: all 1s ease-in;
+    -webkit-transition: all 0.5s ease-in;
     /* Opera */
-    -o-transition: all 1s ease-in;
+    -o-transition: all 0.5s ease-in;
     /* Standard */
-    transition: all 1s ease-in;
+    transition: all 0.5s ease-in;
 }
