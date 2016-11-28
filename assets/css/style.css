@@ -20,7 +20,7 @@ a {
 * general styling classes
 */
 .transparent-blue-box {
-	background: rgba(0, 67, 255, 140);
+	background: rgba(0, 67, 255, 0.5);
 	border-radius: 10px;
 	box-shadow: 0 0 25px 0 #4949FC;
 	padding: 15px;
@@ -42,12 +42,11 @@ a {
 	left: 50%;
 	position: absolute;
 	top: 50%;
-	transform: translateX(-50%);
-	transform: translateY(-50%);
+	transform: translate(-50%, -50%);
 }
 
 .home .wrapper {
-	background-color: rgba(255, 255, 255, 100);
+	background-color: rgba(255, 255, 255, 0.1);
     height: 100vh;
     left: 0;
     top: 0;
