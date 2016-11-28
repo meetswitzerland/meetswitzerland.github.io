@@ -44,6 +44,7 @@ a {
 
 .home .input-text {
 	border: none;
+	border-radius: 5px;
 	color: grey;
 	padding: 5px;
 }
