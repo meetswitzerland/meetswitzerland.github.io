@@ -31,6 +31,8 @@ a {
 */
 .home {
 	background:url('../img/wallpapers/wp-matterhorn-day.jpg');
+	background-position: center;
+	background-size: cover;
     position: relative;
 }
 
@@ -40,6 +42,7 @@ a {
 
 .home .label {
 	font-size: 16px;
+	padding: 10px 0;
 }
 
 .home .input-text {
@@ -47,6 +50,10 @@ a {
 	border-radius: 5px;
 	color: grey;
 	padding: 5px;
+}
+
+.home .input-text:focus {
+	outline: none;
 }
 
 .home .container {
@@ -77,18 +84,60 @@ a {
     font-weight: bold;
     padding: 10px 5px;
     width: 100%;
+	
+	/* Firefox */
+    -moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
 }
 
 .home .button-bar .button:hover {
 	background-color: #fff;
 	box-shadow: none;
 	color: #0043ff;
+	
     /* Firefox */
-    -moz-transition: all 0.5s ease-in;
+    -moz-transition: all 0.2s ease-in;
     /* WebKit */
-    -webkit-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.2s ease-in;
     /* Opera */
-    -o-transition: all 0.5s ease-in;
+    -o-transition: all 0.2s ease-in;
     /* Standard */
-    transition: all 0.5s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+/**
+* media smartphone
+*/
+@media screen and (max-width: 768px) {
+	.container {
+		width: 80%;
+	}
+	
+	.button {
+		font-size: 20px;
+	}
+	
+	.home .label {
+		display: block;
+		width: 100%;
+	}
+	
+	.home .input-text {
+		display: block;
+		width: 100%;
+	}
+	
+	.form .col-xs-12:after {
+		clear: both;
+		content: "";
+		display: table;
+		float: none;
+		line-height: 0;
+	}
+	
 }
