@@ -140,4 +140,7 @@ a {
 		line-height: 0;
 	}
 	
+	.button-bar .col-xs-12 {
+		padding: 15px 0;
+	}
 }
