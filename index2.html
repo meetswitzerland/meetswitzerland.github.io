@@ -26,6 +26,9 @@
 		<meta name="theme-color" content="#ffffff">
 		
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
     </head>
     <body class="home">
@@ -33,54 +36,99 @@
 			<div class="container">
 				<div class="input-box row">
 					<div class="transparent-blue-box col-xs-12">
-						<div class="row">
-							<div class="col-xs-12">
-								<h1 class="title">Wer</h1>
-							</div>
-						</div>
-						<div class="row">
-							<form class="form q1who" style="display: block;">
-								<div class="col-xs-12 col-sm-6">
-									<label class="label">Anzahl Erwachsene</label>
-									<input class="input-text" type="text">
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<label class="label">Anzahl Kinder</label>
-									<input class="input-text" type="text">
-								</div>
-							</form>
-							<form class="form q2what" style="display: none;">
-								<div class="col-xs-12">
-									<input class="input-text" type="text" placeholder="Skitour, Wellness, Wandern,...">
-								</div>
-							</form>
-							<form class="form q3where" style="display: none;">
-								<div class="col-xs-12">
-									<input class="input-text" type="text" placeholder="Bern, Zermatt, Westschweiz,...">
-								</div>
-							</form>
-							<form class="form q4when" style="display: none;">
-								<div class="col-xs-6">
-									<input class="input-text" type="text" placeholder="Von">
-								</div>
-								<div class="col-xs-6">
-									<input class="input-text" type="text" placeholder="Bis">
-								</div>
-							</form>
-						</div>
+                        <h1>Meet Switzerland!</h1>
+                        <p>Entdecke die Schweiz in einer völlig neuen Dimension!</p>
+                        <div class="question-wrapper">
+                            <div id="question1" class="question-box">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Wer</h3>
+                                    </div>
+                                </div>
+                                <form class="form q1who" style="display: block;">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label class="label">Anzahl Erwachsene</label>
+                                        <input class="input-text" type="text">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label class="label">Anzahl Kinder</label>
+                                        <input class="input-text" type="text">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="question2" class="question-box"  style="display: none;">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Was</h3>
+                                    </div>
+                                </div>
+                                <form class="form q2what">
+                                    <div class="col-xs-12">
+                                        <input class="input-text" type="text" placeholder="Skitour, Wellness, Wandern,...">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="question3" class="question-box"  style="display: none;">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Wo</h3>
+                                    </div>
+                                </div>
+                                <form class="form q3where">
+                                    <div class="col-xs-12">
+                                        <input class="input-text" type="text" placeholder="Bern, Zermatt, Westschweiz,...">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="question4" class="question-box"  style="display: none;">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Wann</h3>
+                                    </div>
+                                </div>
+                                <form class="form q4when">
+                                    <div class="col-xs-6">
+                                        <input class="input-text" type="text" placeholder="Von">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input class="input-text" type="text" placeholder="Bis">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 					</div>
 				</div>
 				<div class="button-bar row">
 					<div class="col-sm-offset-3 col-xs-12 col-sm-3">
-						<button class="transparent-blue-box button">Überspringen</button>
+						<button class="transparent-blue-box button next-question">Überspringen</button>
 					</div>
 					<div class="col-xs-12 col-sm-3">
-						<button class="transparent-blue-box button">Weiter</button>
+						<button class="transparent-blue-box button  next-question">Weiter</button>
 					</div>
 				</div>
 			</div>
 		</div>
         <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function()
+        {
+            var currentQuestion = 1;
+
+            $('.next-question').on('click', function()
+            {
+                //$('#question1').hide("slide", { direction: "left" }, 1000);
+                $('#question' + currentQuestion).slideUp(1000, function(){
+                    currentQuestion++;
+
+                    $('#question' + currentQuestion).slideDown(1000, function(){});
+                })
+            });
+        });
+        </script>
     </body>
 </html>
