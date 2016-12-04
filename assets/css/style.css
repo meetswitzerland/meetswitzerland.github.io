@@ -40,7 +40,9 @@ a {
 */
 .home {
 	background:url('../img/wallpapers/wp-matterhorn-day.jpg');
+	background-attachment: fixed;
 	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
     position: relative;
 }
@@ -78,9 +80,8 @@ a {
 
 .home .wrapper {
 	background-color: rgba(255, 255, 255, 0.5);
-    height: 100vh;
-    left: 0;
-    top: 0;
+	height: 100%;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -127,6 +128,13 @@ a {
 * media smartphone
 */
 @media screen and (max-width: 768px) {
+	.home .container {
+		left: 0;
+		position: relative;
+		top: 0;
+		transform: none;
+	}
+
 	.container {
 		width: 80%;
 	}
