@@ -19,11 +19,20 @@ a {
 /**
 * general styling classes
 */
-.transparent-blue-box {
-	background: rgba(0, 67, 255, 0.6);
+.transparent-white-box {
+	background: rgba(255, 255, 255, 0.6);
 	border-radius: 5px;
-	box-shadow: 0 0 25px 0 #0043ff;
 	padding: 30px 15px;
+}
+
+.transparent-blue-box {
+	background: rgba(92, 183, 242, 0.6);
+	border-radius: 5px;
+	padding: 30px 15px;
+}
+
+.question-box{
+    padding: inherit;
 }
 
 /**
@@ -43,6 +52,10 @@ a {
 .home .label {
 	font-size: 16px;
 	padding: 10px 0;
+}
+
+.home .question-wrapper{
+    height: 180px;
 }
 
 .home .input-text {
@@ -98,7 +111,7 @@ a {
 .home .button-bar .button:hover {
 	background-color: #fff;
 	box-shadow: none;
-	color: #0043ff;
+	color: #5CB7F2;
 	
     /* Firefox */
     -moz-transition: all 0.2s ease-in;

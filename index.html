@@ -6,99 +6,143 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>MeetSwitzerland</title>
-
+		
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+		<link rel="manifest" href="assets/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <style>
-            html, body {
-                width: 100%;
-                height: 100%;
-                min-height: 100%;
-                min-width: 100%;
-            }
-            body { 
-                background: url(assets/img/bg.svg) no-repeat center center fixed; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .jumbotron {
-                background-color: rgba(250,250,250,0.9);
-                box-shadow: 0 0 10px rgba(200,200,200,0.8);
-            }
-        </style>
+        <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.structure.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
     </head>
-    <body>
-
-        <div class="container">
-            <div class="jumbotron">
-                <h1>MeetSwitzerland</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</p>
-
-                <div class="row">
-                    <form role="form">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label class="sr-only" for="location">Location</label>
-                                <input type="email" class="form-control" id="location" placeholder="Where ?">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label class="sr-only" for="checkin">Check in</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="checkin" placeholder="Check in">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <body class="home">
+		<div class="wrapper">
+			<div class="container">
+				<div class="input-box row">
+					<div class="transparent-white-box col-xs-12">
+						<div class="row">                                   
+							<div class="col-xs-12">
+								<h1 class="pagetitle">Meet Switzerland!</h1>
+								<p>Entdecke die Schweiz in einer völlig neuen Dimension!</p>
+							</div>
+						</div>
+                        <div class="question-wrapper">
+                            <div id="question1" class="question-box">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Wer</h3>
+                                    </div>
                                 </div>
+                                <form class="form q1who" style="display: block;">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label class="label">Anzahl Erwachsene</label>
+                                        <input class="input-text" type="text">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label class="label">Anzahl Kinder</label>
+                                        <input class="input-text" type="text">
+                                    </div>
+                                </form>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label class="sr-only" for="checkout">Check out</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="checkout" placeholder="Check out">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+
+                            <div id="question2" class="question-box"  style="display: none;">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Was</h3>
+                                    </div>
                                 </div>
+                                <form class="form q2what">
+                                    <div class="col-xs-12">
+                                        <input class="input-text" type="text" placeholder="Skitour, Wellness, Wandern,...">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="question3" class="question-box"  style="display: none;">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Wo</h3>
+                                    </div>
+                                </div>
+                                <form class="form q3where">
+                                    <div class="col-xs-12">
+                                        <input class="input-text" type="text" placeholder="Bern, Zermatt, Westschweiz,...">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="question4" class="question-box"  style="display: none;">
+                                <div class="row">                                   
+                                    <div class="col-xs-12">
+                                        <h3 class="title">Wann</h3>
+                                    </div>
+                                </div>
+                                <form class="form q4when">
+                                    <div class="col-xs-6">
+                                        <input class="input-text" type="text" placeholder="Von">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input class="input-text" type="text" placeholder="Bis">
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label class="sr-only" for="guest">Guest</label>
-                                <select id="guest" name="guest" class="form-control">
-                                    <option value="1">1 Guest</option>
-                                    <option value="2">2 Guests</option>
-                                    <option value="3">3 Guests</option>
-                                    <option value="4">4 Guests</option>
-                                    <option value="5">5 Guests</option>
-                                    <option value="6">6 Guests</option>
-                                    <option value="7">7 Guests</option>
-                                    <option value="8">8 Guests</option>
-                                    <option value="9">9 Guests</option>
-                                    <option value="10">10 Guests</option>
-                                    <option value="11">11 Guests</option>
-                                    <option value="12">12 Guests</option>
-                                    <option value="13">13 Guests</option>
-                                    <option value="14">14 Guests</option>
-                                    <option value="15">15 Guests</option>
-                                    <option value="16">16+ Guests</option>
-                                </select>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <p>
-                    <a href="#" class="btn btn-primary btn-lg" role="button">Weiter
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </a>
-                </p>
-            </div>
-        </div>
-
+					</div>
+				</div>
+				<div class="button-bar row">
+					<div class="col-sm-offset-2 col-md-offset-3 col-xs-12 col-sm-4 col-md-3">
+						<button class="transparent-blue-box button next-question">Überspringen</button>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<button class="transparent-blue-box button  next-question">Weiter</button>
+					</div>
+				</div>
+			</div>
+		</div>
         <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function()
+        {
+            var currentQuestion = 1;
+
+            $('.next-question').on('click', function()
+            {
+                //$('#question1').hide("slide", { direction: "left" }, 1000);
+                $('#question' + currentQuestion).animate({width:'toggle', opacity: '0'},800,function(){
+                //$('#question' + currentQuestion).slideUp(1000, function(){
+                    currentQuestion++;
+
+                    $('#question' + currentQuestion).slideDown(200, function(){});
+                    
+                });
+                
+                if(currentQuestion >= 3)
+                {
+                    $('.next-question').on('click', function()
+                    {
+                         window.location = '/travel/travel_overview.html';
+                    });
+                }
+            });
+        });
+        </script>
     </body>
 </html>
