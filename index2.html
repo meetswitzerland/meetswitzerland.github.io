@@ -122,11 +122,21 @@
             $('.next-question').on('click', function()
             {
                 //$('#question1').hide("slide", { direction: "left" }, 1000);
-                $('#question' + currentQuestion).slideUp(1000, function(){
+                $('#question' + currentQuestion).animate({width:'toggle', opacity: '0'},800,function(){
+                //$('#question' + currentQuestion).slideUp(1000, function(){
                     currentQuestion++;
 
-                    $('#question' + currentQuestion).slideDown(1000, function(){});
-                })
+                    $('#question' + currentQuestion).slideDown(200, function(){});
+                    
+                });
+                
+                if(currentQuestion >= 3)
+                {
+                    $('.next-question').on('click', function()
+                    {
+                         window.location = '/travel/travel_overview.html';
+                    });
+                }
             });
         });
         </script>
