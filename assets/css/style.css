@@ -35,10 +35,7 @@ a {
     padding: inherit;
 }
 
-/**
-* specific styling home
-*/
-.home {
+.background-image {
 	background:url('../img/wallpapers/wp-matterhorn-day.jpg');
 	background-attachment: fixed;
 	background-position: center;
@@ -46,6 +43,14 @@ a {
 	background-size: cover;
     position: relative;
 }
+
+.container-fluid .row {
+	margin-bottom: 30px;
+}
+
+/**
+* specific styling home
+*/
 
 .home .title, .home .label {
 	color: #fff;
