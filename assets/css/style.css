@@ -125,9 +125,21 @@ a {
 }
 
 .home .skip.button {
+	border: none;
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+	padding: 5px;
 	position: absolute;
 	right: 15px;
 	top: 15px;
+}
+
+.home .skip.button:hover {
+	cursor: pointer;
+	background: #fff;
+	color: #5CB7F2;
 }
 
 /**
