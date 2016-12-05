@@ -106,6 +106,10 @@ a {
 * specific styling home
 */
 
+.home .transparent-white-box {
+	padding: 30px 225px;
+}
+
 .home .title, .home .label {
 	color: #000;
 }
@@ -203,7 +207,8 @@ a {
 }
 
 .home .pagetitle {
-	color: #fff;
+	color: #000;
+	text-align: left;
 }
 
 /**
