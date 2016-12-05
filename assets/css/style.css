@@ -16,11 +16,30 @@ a {
 	text-decoration: none;
 }
 
+.glyphicon {
+	color: grey;
+	font-size: 1.3em;
+	left: 25px;
+	position: absolute;
+	top: 5px;
+}
+
+.search {
+	border: none;
+	border-radius: 5px;
+	color: grey;
+	padding: 5px 5px 5px 30px;
+}
+
+.search:focus {
+	outline: none;
+}
+
 /**
 * general styling classes
 */
 .transparent-white-box {
-	background: rgba(255, 255, 255, 0.6);
+	background: rgba(255, 255, 255, 0.8);
 	border-radius: 5px;
 	padding: 30px 15px;
 }
@@ -46,6 +65,12 @@ a {
 
 .container-fluid .row {
 	margin-bottom: 30px;
+}
+
+.pagetitle {
+	color: #fff;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: center;
 }
 
 /**
@@ -139,6 +164,7 @@ a {
 	position: absolute;
 	right: 15px;
 	top: 15px;
+	z-index: 100;
 }
 
 .home .skip.button:hover {
