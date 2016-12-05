@@ -31,10 +31,6 @@ a {
 	padding: 30px 15px;
 }
 
-.question-box{
-    padding: inherit;
-}
-
 .background-image {
 	background:url('../img/wallpapers/wp-matterhorn-day.jpg');
 	background-attachment: fixed;
@@ -168,21 +164,19 @@ h3 {
 
 .flex-wrapper {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: aliceblue;
 }
 
 .overflow-hider {
-    width: 400px;
+    width: 100%;
     overflow: hidden;
-    background-color: black;
-    box-shadow: 0 0 10px silver;
 }
 
 .question-wrapper {
     display: flex;
-    width: 300%;
+    width: 400%;
     transition: margin-left .5s;
     transition-timing-function: ease;
 }
