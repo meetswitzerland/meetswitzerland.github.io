@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+        }
+        .wrapper {
+            width: 400px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 0 10px silver;
+        }
+        .slides {
+            display: flex;
+            width: 300%;
+            transition: margin-left .5s;
+            transition-timing-function: ease;
+        }
+        .slide {
+            width: 100%;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="slides">
+            <div class="slide">
+                <h3>Wann?</h3>
+                <button onclick="showStep(1)">Next</button>
+            </div>
+            <div class="slide">
+                <h3>Wo?</h3>
+                <button onclick="showStep(2)">Next</button>
+            </div>
+            <div class="slide">
+                <h3>Warum?</h3>
+                <button onclick="showStep(0)">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function showStep(slide) {
+            document.querySelector('.slides').style.marginLeft = '-' + slide + '00%';
+        }
+    </script>
+</body>
+</html>
