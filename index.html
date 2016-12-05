@@ -52,60 +52,69 @@
                                 <div class="row">                                   
                                     <div class="col-xs-12">
                                         <h3 class="title">Wer</h3>
+                        <div class="flex-wrapper">
+                            <div class="overflow-hider">
+                                <div class="question-wrapper">
+                                    <div id="question1" class="question-box">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <h3 class="title">Wer</h3>
+                                            </div>
+                                        </div>
+                                        <form class="form q1who" style="display: block;">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="label">Anzahl Erwachsene</label>
+                                                <input class="input-text" type="text">
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="label">Anzahl Kinder</label>
+                                                <input class="input-text" type="text">
+                                            </div>
+                                        </form>
                                     </div>
-                                </div>
-                                <form class="form q1who" style="display: block;">
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label class="label">Anzahl Erwachsene</label>
-                                        <input class="input-text" type="text">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-6">
-                                        <label class="label">Anzahl Kinder</label>
-                                        <input class="input-text" type="text">
-                                    </div>
-                                </form>
-                            </div>
 
-                            <div id="question2" class="question-box"  style="display: none;">
-                                <div class="row">                                   
-                                    <div class="col-xs-12">
-                                        <h3 class="title">Was</h3>
+                                    <div id="question2" class="question-box"  style="display: none;">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <h3 class="title">Was</h3>
+                                            </div>
+                                        </div>
+                                        <form class="form q2what">
+                                            <div class="col-xs-12">
+                                                <input class="input-text" type="text" placeholder="Skitour, Wellness, Wandern,...">
+                                            </div>
+                                        </form>
                                     </div>
-                                </div>
-                                <form class="form q2what">
-                                    <div class="col-xs-12">
-                                        <input class="input-text" type="text" placeholder="Skitour, Wellness, Wandern,...">
-                                    </div>
-                                </form>
-                            </div>
 
-                            <div id="question3" class="question-box"  style="display: none;">
-                                <div class="row">                                   
-                                    <div class="col-xs-12">
-                                        <h3 class="title">Wo</h3>
+                                    <div id="question3" class="question-box"  style="display: none;">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <h3 class="title">Wo</h3>
+                                            </div>
+                                        </div>
+                                        <form class="form q3where">
+                                            <div class="col-xs-12">
+                                                <input class="input-text" type="text" placeholder="Bern, Zermatt, Westschweiz,...">
+                                            </div>
+                                        </form>
                                     </div>
-                                </div>
-                                <form class="form q3where">
-                                    <div class="col-xs-12">
-                                        <input class="input-text" type="text" placeholder="Bern, Zermatt, Westschweiz,...">
-                                    </div>
-                                </form>
-                            </div>
 
-                            <div id="question4" class="question-box"  style="display: none;">
-                                <div class="row">                                   
-                                    <div class="col-xs-12">
-                                        <h3 class="title">Wann</h3>
+                                    <div id="question4" class="question-box"  style="display: none;">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <h3 class="title">Wann</h3>
+                                            </div>
+                                        </div>
+                                        <form class="form q4when">
+                                            <div class="col-xs-6">
+                                                <input class="input-text" type="text" placeholder="Von">
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input class="input-text" type="text" placeholder="Bis">
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
-                                <form class="form q4when">
-                                    <div class="col-xs-6">
-                                        <input class="input-text" type="text" placeholder="Von">
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <input class="input-text" type="text" placeholder="Bis">
-                                    </div>
-                                </form>
                             </div>
                         </div>
 					</div>
@@ -130,7 +139,8 @@
 
             $('.next-question').on('click', function()
             {
-                //$('#question1').hide("slide", { direction: "left" }, 1000);
+                document.querySelector('.slides').style.marginLeft = '-' + currentQuestion + '00%';
+                /*0//$('#question1').hide("slide", { direction: "left" }, 1000);
                 $('#question' + currentQuestion).animate({width:'toggle', opacity: '0'},800,function(){
                 //$('#question' + currentQuestion).slideUp(1000, function(){
                     currentQuestion++;
@@ -143,9 +153,9 @@
                 {
                     $('.next-question').on('click', function()
                     {
-                         window.location = '/travel/travel_overview.html';
+                         window.location = '/travel/travel_ideas.html';
                     });
-                }
+                }*/
             });
         });
         </script>
