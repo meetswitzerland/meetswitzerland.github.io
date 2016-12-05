@@ -50,10 +50,6 @@ a {
 	padding: 30px 15px;
 }
 
-.question-box{
-    padding: inherit;
-}
-
 .background-image {
 	background:url('../img/wallpapers/wp-matterhorn-day.jpg');
 	background-attachment: fixed;
@@ -78,7 +74,7 @@ a {
 */
 
 .home .title, .home .label {
-	color: #fff;
+	color: #000;
 }
 
 .home .label {
@@ -177,16 +173,6 @@ a {
     height: 80px;
 }
 
-h3.small-title {
-    font-size: 10px;
-    color: black;
-}
-
-h3 {
-    font-size: 8px;
-    color: black;
-}
-
 .img-wrapper img{
     height: 30px;
     width: 30px;
@@ -194,28 +180,25 @@ h3 {
 
 .flex-wrapper {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: aliceblue;
 }
 
 .overflow-hider {
-    width: 400px;
+    width: 100%;
     overflow: hidden;
-    background-color: black;
-    box-shadow: 0 0 10px silver;
 }
 
 .question-wrapper {
     display: flex;
-    width: 300%;
+    width: 400%;
     transition: margin-left .5s;
     transition-timing-function: ease;
 }
 
 .question-box {
     width: 100%;
-    padding: 1em;
 }
 
 /**
