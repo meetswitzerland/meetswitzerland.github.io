@@ -16,12 +16,22 @@ a {
 	text-decoration: none;
 }
 
-.glyphicon {
+.cart-button, .profile-button, .filter-button {
+	height: 30px;
+}
+
+.glyphicon-search {
 	color: grey;
 	font-size: 1.3em;
 	left: 25px;
 	position: absolute;
 	top: 5px;
+}
+
+.glyphicon-shopping-cart, .glyphicon-user, .glyphicon-align-justify {
+    font-size: 25px;
+	position: relative;
+    text-align: center;
 }
 
 .search {
@@ -106,6 +116,10 @@ a {
 * specific styling home
 */
 
+.home .transparent-white-box {
+	padding: 30px 225px;
+}
+
 .home .title, .home .label {
 	color: #000;
 }
@@ -124,6 +138,7 @@ a {
 	border-radius: 5px;
 	color: grey;
 	padding: 5px;
+	width: 70%;
 }
 
 .home .input-text:focus {
@@ -194,22 +209,56 @@ a {
 	right: 15px;
 	top: 15px;
 	z-index: 100;
+	
+	/* Firefox */
+    -moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
 }
 
 .home .skip.button:hover {
 	cursor: pointer;
 	background: #fff;
 	color: #5CB7F2;
+	
+	/* Firefox */
+    -moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
 }
 
 .home .pagetitle {
-	color: #fff;
+	color: #000;
+	text-align: left;
+}
+
+/**
+* media tablet
+**/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	
+	.home .transparent-white-box {
+		padding: 30px 30px;
+	}
 }
 
 /**
 * media smartphone
-*/
+**/
 @media screen and (max-width: 768px) {
+	
+	.home .transparent-white-box {
+		padding: 30px 30px;
+	}
+
 	.home .container {
 		left: 0;
 		position: relative;
@@ -245,5 +294,13 @@ a {
 	
 	.button-bar .col-xs-12 {
 		padding: 15px 0;
+	}
+	
+	.cart-button, .profile-button {
+		margin-top: 15px;
+	}
+	
+	.filter-button {
+		margin-bottom: 15px;
 	}
 }
