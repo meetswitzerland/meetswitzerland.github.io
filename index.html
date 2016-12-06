@@ -141,30 +141,27 @@
         {
             var currentQuestion = 1;
             var numberOfQuestions = $('.question-box').length;
+
+            // Go to next question
             $('.next-question').on('click', function()
             {
-                //alert('next, current is:' + currentQuestion);
                 currentQuestion++;
                 document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
 
-                if(currentQuestion >= numberOfQuestions)
+                // If was last question -> go to next site
+                if(currentQuestion > numberOfQuestions)
                 {
-                    $('.next-question').on('click', function()
-                    {
-                         window.location = '/travel/travel_ideas.html';
-                    });
+                    window.location = '/travel/travel_ideas.html';
                 }
             });
 
+            // Go one question back
             $('.previous-question').on('click', function(){
-                //alert('back, current is:' + currentQuestion);
                 if(currentQuestion > 1)
                 {
                     currentQuestion--;
                     document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
-
                 }
-
             });
         });
         </script>
