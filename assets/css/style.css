@@ -243,7 +243,7 @@ a {
 /**
 * media tablet
 **/
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 	
 	.home .transparent-white-box {
 		padding: 30px 30px;
@@ -294,5 +294,13 @@ a {
 	
 	.button-bar .col-xs-12 {
 		padding: 15px 0;
+	}
+	
+	.cart-button, .profile-button {
+		margin-top: 15px;
+	}
+	
+	.filter-button {
+		margin-bottom: 15px;
 	}
 }
