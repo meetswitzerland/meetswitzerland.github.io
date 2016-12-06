@@ -124,7 +124,7 @@
 				</div>
 				<div class="button-bar row">
 					<div class="col-sm-offset-2 col-md-offset-3 col-xs-12 col-sm-4 col-md-3">
-						<button class="transparent-blue-box button next-question">Überspringen</button>
+						<button class="transparent-blue-box button previous-question">Zurück</button>
 					</div>
 					<div class="col-xs-12 col-sm-4 col-md-3">
 						<button class="transparent-blue-box button  next-question">Weiter</button>
@@ -136,14 +136,17 @@
         <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
+
         $(document).ready(function()
         {
             var currentQuestion = 1;
             var numberOfQuestions = $('.question-box').length;
             $('.next-question').on('click', function()
             {
-                document.querySelector('.question-wrapper').style.marginLeft = '-' + currentQuestion + '00%';
+                //alert('next, current is:' + currentQuestion);
                 currentQuestion++;
+                document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
+
                 if(currentQuestion >= numberOfQuestions)
                 {
                     $('.next-question').on('click', function()
@@ -151,6 +154,17 @@
                          window.location = '/travel/travel_ideas.html';
                     });
                 }
+            });
+
+            $('.previous-question').on('click', function(){
+                //alert('back, current is:' + currentQuestion);
+                if(currentQuestion > 1)
+                {
+                    currentQuestion--;
+                    document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
+
+                }
+
             });
         });
         </script>
