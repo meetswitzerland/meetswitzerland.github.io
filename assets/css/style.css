@@ -30,7 +30,6 @@ a {
 
 .glyphicon-shopping-cart, .glyphicon-user, .glyphicon-align-justify {
     font-size: 25px;
-    margin-top: 5px;
 	position: relative;
     text-align: center;
 }
@@ -242,8 +241,18 @@ a {
 }
 
 /**
+* media tablet
+**/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	
+	.home .transparent-white-box {
+		padding: 30px 30px;
+	}
+}
+
+/**
 * media smartphone
-*/
+**/
 @media screen and (max-width: 768px) {
 	
 	.home .transparent-white-box {
