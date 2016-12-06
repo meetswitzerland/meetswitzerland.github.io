@@ -16,12 +16,23 @@ a {
 	text-decoration: none;
 }
 
-.glyphicon {
+.cart-button, .profile-button, .filter-button {
+	height: 30px;
+}
+
+.glyphicon-search {
 	color: grey;
 	font-size: 1.3em;
 	left: 25px;
 	position: absolute;
 	top: 5px;
+}
+
+.glyphicon-shopping-cart, .glyphicon-user, .glyphicon-align-justify {
+    font-size: 25px;
+    margin-top: 5px;
+	position: relative;
+    text-align: center;
 }
 
 .search {
@@ -128,6 +139,7 @@ a {
 	border-radius: 5px;
 	color: grey;
 	padding: 5px;
+	width: 70%;
 }
 
 .home .input-text:focus {
@@ -198,12 +210,30 @@ a {
 	right: 15px;
 	top: 15px;
 	z-index: 100;
+	
+	/* Firefox */
+    -moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
 }
 
 .home .skip.button:hover {
 	cursor: pointer;
 	background: #fff;
 	color: #5CB7F2;
+	
+	/* Firefox */
+    -moz-transition: all 0.2s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.2s ease-in;
+    /* Opera */
+    -o-transition: all 0.2s ease-in;
+    /* Standard */
+    transition: all 0.2s ease-in;
 }
 
 .home .pagetitle {
@@ -215,6 +245,11 @@ a {
 * media smartphone
 */
 @media screen and (max-width: 768px) {
+	
+	.home .transparent-white-box {
+		padding: 30px 30px;
+	}
+
 	.home .container {
 		left: 0;
 		position: relative;
