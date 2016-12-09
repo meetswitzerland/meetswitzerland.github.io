@@ -113,6 +113,14 @@ a {
 }
 
 /**
+* specific form styling
+*/
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/**
 * specific styling home
 */
 
