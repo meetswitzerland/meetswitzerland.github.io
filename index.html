@@ -188,15 +188,15 @@
             // Handle Add/Remove child
             $('#add-child').on('click', function(){
                 //alert();
-                input = $('#input-adults').val();
+                input = $('#input-childs').val();
                 if($.isNumeric(input))
-                    $('#input-adults').val(++input);
+                    $('#input-childs').val(++input);
             });
             $('#remove-child').on('click', function(){
                 //alert();
-                input = $('#input-adults').val();
+                input = $('#input-childs').val();
                 if($.isNumeric(input) && input > 0)
-                    $('#input-adults').val(--input);
+                    $('#input-childs').val(--input);
             });
 
         });
