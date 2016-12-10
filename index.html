@@ -47,6 +47,16 @@
 								</div>
 							</div>
 						</div>
+                        <div class="row question-tabs">
+                            <div class="col-xs-12">
+                                <div>
+                                    <span id="question-tab1" class="active-tab"><span class="glyphicon glyphicon-user"></span>Wer? </span> >>
+                                    <span id="question-tab2"><span class="glyphicon glyphicon-flag"></span>Was? </span> >>
+                                    <span id="question-tab3"><span class="glyphicon glyphicon-map-marker"></span>Wo? </span> >>
+                                    <span id="question-tab4"><span class="glyphicon glyphicon-calendar"></span>Wann? </span>
+                                 </div>
+                            </div>
+                        </div>
                         <div class="flex-wrapper">
                             <div class="overflow-hider">
                                 <div class="question-wrapper">
@@ -152,9 +162,11 @@
             // Go to next question
             $('.next-question').on('click', function()
             {
+                $("#question-tab"+currentQuestion).removeClass("active-tab");
                 currentQuestion++;
                 document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
-
+                $("#question-tab"+currentQuestion).addClass("active-tab");
+                //$('#question' + currentQuestion).find('input').first().;
                 // If was last question -> go to next site
                 if(currentQuestion > numberOfQuestions)
                 {
@@ -166,8 +178,10 @@
             $('.previous-question').on('click', function(){
                 if(currentQuestion > 1)
                 {
+                    $("#question-tab"+currentQuestion).removeClass("active-tab");
                     currentQuestion--;
                     document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
+                    $("#question-tab"+currentQuestion).addClass("active-tab");
                 }
             });
 

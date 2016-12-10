@@ -89,6 +89,11 @@ a {
     width: 30px;
 }
 
+.active-tab{
+    font-weight: bold;
+    font-size: 16px;
+}
+
 .flex-wrapper {
     display: flex;
     width: 100%;
@@ -135,6 +140,10 @@ a {
 .home .label {
 	font-size: 16px;
 	padding: 10px 0;
+}
+
+.home .question-tabs{
+    margin-top: 30px;
 }
 
 .home .question-wrapper{
