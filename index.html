@@ -93,7 +93,7 @@
                                         <div class="row">
                                             <form class="form q2what">
                                                 <div class="col-xs-12">
-                                                    <input class="input-text" type="text" placeholder="Skitour, Wellness, Wandern,...">
+                                                    <input class="input-text" type="text" placeholder="Skitour, Wellness, Wandern,..." >
                                                 </div>
                                             </form>
                                         </div>
@@ -123,10 +123,10 @@
                                         <div class="row">
                                             <form class="form q4when">
                                                 <div class="col-xs-6">
-                                                    <input class="input-text" type="text" placeholder="Von">
+                                                    <input id="date-from" class="input-text" type="text" placeholder="Von"> <span class="glyphicon glyphicon-calendar"></span>
                                                 </div>
                                                 <div class="col-xs-6">
-                                                    <input class="input-text" type="text" placeholder="Bis">
+                                                    <input id="date-to" class="input-text" type="text" placeholder="Bis"> <span class="glyphicon glyphicon-calendar"></span>
                                                 </div>
                                             </form>
                                         </div>
@@ -185,6 +185,7 @@
                 }
             });
 
+            /***** JavaScript Question 1 *****/
             // Handel Add/Remove Adult
             $('#add-adult').on('click', function(){
                 //alert();
@@ -213,7 +214,43 @@
                     $('#input-childs').val(--input);
             });
 
+            /***** JavaScript Question 2 *****/
+
+            /***** JavaScript Question 3 *****/
+
+            /***** JavaScript Question 4 *****/
+            function getDate( element ) {
+
+                var date;
+                try {
+                    date = $.datepicker.parseDate( dateFormat, element.value );
+                } catch( error ) {
+                    date = null;
+                }
+
+                return date;
+            }
+
+            var dateFormat = "mm/dd/yy";
+            from = $( "#date-from" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3,
+                autoSize: false
+            }).on( "change", function() {
+                to.datepicker( "option", "minDate", getDate( this ) );
+            });
+
+            to = $( "#date-to" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                autoSize: false,
+                numberOfMonths: 3
+            }).on( "change", function() {
+                from.datepicker( "option", "maxDate", getDate( this ) );
+            });
         });
+
         </script>
     </body>
 </html>

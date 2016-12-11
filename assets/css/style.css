@@ -115,6 +115,7 @@ a {
 
 .question-box {
     width: 100%;
+    display: block;
 }
 
 /**
