@@ -38,6 +38,7 @@ a {
 
 .btn-add-remove:hover {
 	box-shadow: 0 0 5px 0;
+	cursor: pointer;
 }
 
 .btn-add-remove:before {
@@ -109,16 +110,18 @@ a {
 
 .img-wrapper {
 	float: left;
-	padding: 5px 5px 5px 0;
+	padding: 0 5px 5px 0;
+	width: 30%;
 }
 
 .img-wrapper img{
-    height: 140px;
-	width: auto;
+    height: auto;
+	width: 100%;
 }
 
 .item-content {
 	float: left;
+	width: 30%;
 }
 
 .active-tab{
