@@ -28,6 +28,22 @@ a {
 	top: 5px;
 }
 
+.btn-add-remove {
+	width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-add-remove:hover {
+	box-shadow: 0 0 5px 0;
+}
+
+.btn-add-remove:before {
+	vertical-align: middle;
+}
+
 .glyphicon-shopping-cart, .glyphicon-user, .glyphicon-align-justify {
     font-size: 25px;
 	position: relative;
