@@ -103,8 +103,8 @@ a {
 
 .item:after {
 	clear: both;
+	content: "";
 	display: table;
-	float: none;
 	line-height: 0;
 }
 
