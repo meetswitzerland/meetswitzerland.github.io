@@ -121,9 +121,21 @@ a {
 	float: left;
 }
 
-.active-tab{
+
+
+.home .kachel .glyphicon{
+    border: 3px solid black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-right: 10px;
+    padding: 3px;
+}
+
+.home .active-kachel .glyphicon{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 40px;
 }
 
 .flex-wrapper {
