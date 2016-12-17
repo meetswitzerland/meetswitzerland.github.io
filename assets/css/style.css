@@ -41,6 +41,31 @@ a {
 	cursor: pointer;
 }
 
+.btn-buy {
+    width: 200px;
+    height: 30px;
+    background-color: #50658F;
+    color: white;
+    vertical-align: middle;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-buy .glyphicon-shopping-cart, btn-buy .glyphicon-ok {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.btn-buy:hover {
+    background-color: #7A8AAC;
+    color: white;
+}
+
+.btn-buy.btn-in-cart{
+    background-color: #1CA315;
+}
+
 .btn-add-remove:before {
 	vertical-align: middle;
 }

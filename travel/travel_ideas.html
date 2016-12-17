@@ -77,6 +77,7 @@
 										Kindertauglich: eigener FamilienSPA, Kinder nur in Begleitung Erwachsener
 									</p>
 								</div>
+                                <button class="btn-buy" type="button" class="btn-default"><span class="glyphicon glyphicon-shopping-cart"></span>  <span class="btn-text">In den Einkaufswagen</span></button>
 								<div class="details" style="display: none;">
 									<p>
 										Öffnungszeiten: 13.00 Uhr - 19.00 Uhr, bei Schlechtwetter ab 11.00 Uhr,
@@ -102,6 +103,7 @@
 										Die rasante Fahrt dauert rund 10 Minuten.
 									</p>
 								</div>
+                                <button class="btn-buy" type="button" class="btn-default"><span class="glyphicon glyphicon-shopping-cart"></span>  <span class="btn-text">In den Einkaufswagen</span></button>
 								<div class="details" style="display: none;">
 									<p>
 										Ein Gaudi für Jung und Alt. Zehn Minuten Freudenschreie, pure Lebenslust, weisse Pracht und viel Nervenkitzel.
@@ -128,6 +130,7 @@
 										Mit Blick auf das Matterhorn. Der Snowpark ist über die Pendelbahn zum Matterhorn glacier paradise (3'883 m) erreichbar.
 									</p>
 								</div>
+                                <button class="btn-buy" type="button" class="btn-default"><span class="glyphicon glyphicon-shopping-cart"></span>  <span class="btn-text">In den Einkaufswagen</span></button>
 								<div class="details" style="display: none;">
 									<p>
 										Wer ins Schwärmen gerät bei Begriffen wie Airtime, Smooth Transitions, Easy Slides oder Hard Rails ist hier an der richtigen Adresse.
@@ -152,5 +155,15 @@
 		</div>
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".btn-buy").on("click", function(){
+                    $(this).addClass("btn-in-cart");
+                    var span = $(this).find(".glyphicon");
+                    span.removeClass("glyphicon-shopping-cart").addClass("glyphicon-ok");
+                    $(this).find(".btn-text").text("Im Einkaufswagen");
+                })
+            });
+        </script>
     </body>
 </html>
