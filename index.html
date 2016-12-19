@@ -179,6 +179,9 @@
             var currentQuestion = 1;
             var numberOfQuestions = $('.question-box').length;
 
+            // Hide previous button on the first page 
+            $('.previous-question').hide();
+
             //$('#input-adults').spinner();
             //$('#input-childs').spinner();
 
@@ -189,6 +192,7 @@
                 currentQuestion++;
                 document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
                 $("#question-tab"+currentQuestion).addClass("active-kachel");
+                $('.previous-question').show();
                 //$('#question' + currentQuestion).find('input').first().;
                 // If was last question -> go to next site
                 if(currentQuestion > numberOfQuestions)
@@ -205,6 +209,10 @@
                     currentQuestion--;
                     document.querySelector('.question-wrapper').style.marginLeft = '-' + (currentQuestion-1) + '00%';
                     $("#question-tab"+currentQuestion).addClass("active-kachel");
+                }
+
+                if (currentQuestion == 1) {
+                    $('.previous-question').hide();
                 }
             });
 
